@@ -7,6 +7,6 @@ Goals:
 
 To do:
 - Rewrite code to refactor classes
-- Add JS for translations feature
+- Add JS for translations feature (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_google_translate_vertically)
 
 Work in progress.
