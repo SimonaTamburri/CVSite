@@ -1,8 +1,3 @@
-NENGO:
-    - Finire confronti fra CV e testi
-    - Aggiuingere soft skills a destra e magari qualche dettaglio in più a sinistra
-
-
 PARADIGMAS:
 - Keep the W3schools CSS as standard
 - NO frameworks, just HTML/JS/CSS stuff
