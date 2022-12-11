@@ -1,0 +1,24 @@
+NENGO:
+    - Finire confronti fra CV e testi
+    - 
+
+
+PARADIGMAS:
+- Keep the W3schools CSS as standard
+- NO frameworks, just HTML/JS/CSS stuff
+
+TODO:
+    URGENT:
+    - Add nice layouting PDF export functionality
+    - Add JS for translations feature (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_google_translate_vertically)
+
+    NORMAL:
+    - Evaluation of code refactors
+
+    LOW:
+    - Add dark mode 
+    - Fulfill the Wiki (ENG)
+
+DEV NOTES:
+- NOT possible to apply class for constants, awful syntax and useless https://stackoverflow.com/questions/54526456/html-label-constants-without-javascript
+- To change notes, only change title of icon with: https://fontawesome.com/search?o=r&c=business&s=light
