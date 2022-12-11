@@ -1,6 +1,7 @@
 NENGO:
     - Finire confronti fra CV e testi
-    - 
+    - Aggiuingere soft skills a destra e magari qualche dettaglio in più a sinistra
+
 
 PARADIGMAS:
 - Keep the W3schools CSS as standard
@@ -10,6 +11,7 @@ TODO:
     URGENT:
     - Add nice layouting PDF export functionality
     - Add JS for translations feature (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_google_translate_vertically)
+    - Better spacing on paragraph subtitles
 
     NORMAL:
     - Evaluation of code refactors
