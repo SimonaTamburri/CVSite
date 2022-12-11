@@ -2,7 +2,6 @@ NENGO:
     - Finire confronti fra CV e testi
     - 
 
-
 PARADIGMAS:
 - Keep the W3schools CSS as standard
 - NO frameworks, just HTML/JS/CSS stuff
