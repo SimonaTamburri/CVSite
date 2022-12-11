@@ -7,6 +7,7 @@ TODO:
     - Add nice layouting PDF export functionality
     - Add JS for translations feature (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_google_translate_vertically)
     - Better spacing on paragraph subtitles
+    - Make section of the document collapsable
 
     NORMAL:
     - Evaluation of code refactors
@@ -14,6 +15,7 @@ TODO:
     LOW:
     - Add dark mode 
     - Fulfill the Wiki (ENG)
+    - Transformation of Notes into redmine issues
 
 DEV NOTES:
 - NOT possible to apply class for constants, awful syntax and useless https://stackoverflow.com/questions/54526456/html-label-constants-without-javascript
