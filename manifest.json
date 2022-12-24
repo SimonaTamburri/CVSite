@@ -2,27 +2,27 @@
     "name": "CVSite",
     "short_name": "CVSite",
     "icons": [{
-      "src": "images/hello-icon-128.png",
+      "src": "https://media-exp1.licdn.com/dms/image/C5603AQHwjvhVfqe7Xw/profile-displayphoto-shrink_800_800/0/1550731570378?e=1675900800&v=beta&t=ZPXXQ44Z30ZVoEnjFvKqyR6VRNlGp63ygOLQwTEFVzY",
         "sizes": "128x128",
         "type": "image/png"
       }, {
-        "src": "images/hello-icon-144.png",
+        "src": "https://media-exp1.licdn.com/dms/image/C5603AQHwjvhVfqe7Xw/profile-displayphoto-shrink_800_800/0/1550731570378?e=1675900800&v=beta&t=ZPXXQ44Z30ZVoEnjFvKqyR6VRNlGp63ygOLQwTEFVzY",
         "sizes": "144x144",
         "type": "image/png"
       }, {
-        "src": "images/hello-icon-152.png",
+        "src": "https://media-exp1.licdn.com/dms/image/C5603AQHwjvhVfqe7Xw/profile-displayphoto-shrink_800_800/0/1550731570378?e=1675900800&v=beta&t=ZPXXQ44Z30ZVoEnjFvKqyR6VRNlGp63ygOLQwTEFVzY",
         "sizes": "152x152",
         "type": "image/png"
       }, {
-        "src": "images/hello-icon-192.png",
+        "src": "https://media-exp1.licdn.com/dms/image/C5603AQHwjvhVfqe7Xw/profile-displayphoto-shrink_800_800/0/1550731570378?e=1675900800&v=beta&t=ZPXXQ44Z30ZVoEnjFvKqyR6VRNlGp63ygOLQwTEFVzY",
         "sizes": "192x192",
         "type": "image/png"
       }, {
-        "src": "images/hello-icon-256.png",
+        "src": "https://media-exp1.licdn.com/dms/image/C5603AQHwjvhVfqe7Xw/profile-displayphoto-shrink_800_800/0/1550731570378?e=1675900800&v=beta&t=ZPXXQ44Z30ZVoEnjFvKqyR6VRNlGp63ygOLQwTEFVzY",
         "sizes": "256x256",
         "type": "image/png"
       }, {
-        "src": "images/hello-icon-512.png",
+        "src": "https://media-exp1.licdn.com/dms/image/C5603AQHwjvhVfqe7Xw/profile-displayphoto-shrink_800_800/0/1550731570378?e=1675900800&v=beta&t=ZPXXQ44Z30ZVoEnjFvKqyR6VRNlGp63ygOLQwTEFVzY",
         "sizes": "512x512",
         "type": "image/png"
       }],
