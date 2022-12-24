@@ -15,22 +15,32 @@ var filesToCache = [
 //   self.skipWaiting();
 // });
 
-self.addEventListener("install", (event) => {
-    console.log("Service Worker : Installed!")
+// self.addEventListener("install", (event) => {
+//   console.log("Service Worker : Installed!")
 
-    event.waitUntil(
-        
-        (async() => {
-            try {
-                cache_obj = await caches.open(cache)
-                cache_obj.addAll(filesToCache)
-            }
-            catch{
-                console.log("error occured while caching...")
-            }
-        })()
-    )
-} )
+//   event.waitUntil(
+      
+//       (async() => {
+//           try {
+//               cache_obj = await caches.open(cache)
+//               cache_obj.addAll(filesToCache)
+//           }
+//           catch{
+//               console.log("error occured while caching...")
+//           }
+//       })()
+//   )
+// } )
+
+const filesUpdate = cache => {
+  const stack = [];
+  assets.forEach(file => stack.push(
+      cache.add(file).catch(_=>console.error(`can't load ${file} to cache`))
+  ));
+  return Promise.all(stack);
+};
+
+installEvent.waitUntil(caches.open(cacheName).then(filesUpdate));
 
 /* Serve cached content when offline */
 self.addEventListener('fetch', function(e) {
