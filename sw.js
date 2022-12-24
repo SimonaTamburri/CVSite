@@ -34,7 +34,7 @@ var filesToCache = [
 
 const filesUpdate = cache => {
   const stack = [];
-  assets.forEach(file => stack.push(
+  filesToCache.forEach(file => stack.push(
       cache.add(file).catch(_=>console.error(`can't load ${file} to cache`))
   ));
   return Promise.all(stack);
