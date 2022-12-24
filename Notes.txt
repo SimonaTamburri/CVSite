@@ -4,6 +4,10 @@ PARADIGMAS:
 
 TODO:
     URGENT:
+    -Try to add PWA:
+        - https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/
+        - https://github.com/jamesjohnson280/hello-pwa
+
     - Add nice layouting PDF export functionality
     - Add JS for translations feature (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_google_translate_vertically)
     - Better spacing on paragraph subtitles
