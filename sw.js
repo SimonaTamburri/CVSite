@@ -9,11 +9,26 @@ var filesToCache = [
 // self.addEventListener('install', function(e) {
 //   e.waitUntil(
 //     caches.open(cacheName).then(function(cache) {
+//       // return cache.addAll(filesToCache);
 //       return cache.addAll(filesToCache);
 //     })
 //   );
 //   self.skipWaiting();
 // });
+
+/* Start the service worker and cache all of the app's content */
+self.addEventListener('install', function(e) {
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      const stack = [];
+      filesToCache.forEach(file => stack.push(
+          cache.add(file).catch(_=>console.error(`can't load ${file} to cache`))
+      ));
+      return Promise.all(stack);    
+    })
+  );
+  self.skipWaiting();
+});
 
 // self.addEventListener("install", (event) => {
 //   console.log("Service Worker : Installed!")
@@ -32,15 +47,15 @@ var filesToCache = [
 //   )
 // } )
 
-const filesUpdate = cache => {
-  const stack = [];
-  filesToCache.forEach(file => stack.push(
-      cache.add(file).catch(_=>console.error(`can't load ${file} to cache`))
-  ));
-  return Promise.all(stack);
-};
+// const filesUpdate = cache => {
+//   const stack = [];
+//   filesToCache.forEach(file => stack.push(
+//       cache.add(file).catch(_=>console.error(`can't load ${file} to cache`))
+//   ));
+//   return Promise.all(stack);
+// };
 
-installEvent.waitUntil(caches.open(cacheName).then(filesUpdate));
+// installEvent.waitUntil(caches.open(cacheName).then(filesUpdate));
 
 /* Serve cached content when offline */
 self.addEventListener('fetch', function(e) {
