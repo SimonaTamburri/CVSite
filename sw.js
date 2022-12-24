@@ -1,6 +1,5 @@
 var cacheName = 'CVSite'
 var filesToCache = [
-  '/',
   '/index.html',
   '/js/main.js'
 ];
