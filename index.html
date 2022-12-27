@@ -5,18 +5,13 @@
 <head>
     <meta charset="utf-8">
     <title>Luca Martinengo - CV</title>
-    <base href="/CVSite/"/>    
-    <link rel="manifest" href="manifest.json">
     <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
-    <link rel="apple-touch-icon" href="images/hello-icon-152.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://lucamartinengo.github.io/CVSite/" />
+    <link rel="manifest" href="/CVSite/manifest.webmanifest">
+    <link rel="stylesheet" href="css/styles.css">
     <meta name="theme-color" content="white" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Hello World">
-    <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <!-- <link rel="stylesheet" href="css/w3.css"> -->    
+    <!-- <link rel="stylesheet" href="css/w3.css">     -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -590,7 +585,15 @@
             <a href="https://www.linkedin.com/in/martinengoluca/ "><i class="fa fa-linkedin w3-hover-opacity"></i></a>
             <hr>
         </footer>
-        <script src="js/main.js"></script>
+        <script>
+            if (navigator.serviceWorker) {
+              navigator.serviceWorker.register (
+                '/CVSite/sw.js',
+                {scope: '/CVSite/'}
+              )
+            }
+        </script>
+        <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -1,66 +1,52 @@
-var cacheName = 'CVSite'
-var filesToCache = [
-  'index.html',
-  'js/main.js'
-];
+var GHPATH = '/CVSite';
+var APP_PREFIX = 'CVSite_';
+var VERSION = 'version_01';
+var URLS = [
+  `${GHPATH}/`,
+  `${GHPATH}/index.html`,
+  `${GHPATH}/css/styles.css`,
+  `${GHPATH}/img/icon.png`,
+  `${GHPATH}/js/app.js`
+]
 
-// /* Start the service worker and cache all of the app's content */
-// self.addEventListener('install', function(e) {
-//   e.waitUntil(
-//     caches.open(cacheName).then(function(cache) {
-//       // return cache.addAll(filesToCache);
-//       return cache.addAll(filesToCache);
-//     })
-//   );
-//   self.skipWaiting();
-// });
-
-/* Start the service worker and cache all of the app's content */
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      const stack = [];
-      filesToCache.forEach(file => stack.push(
-          cache.add(file).catch(_=>console.error(`can't load ${file} to cache`))
-      ));
-      return Promise.all(stack);    
-    })
-  );
-  self.skipWaiting();
-});
-
-// self.addEventListener("install", (event) => {
-//   console.log("Service Worker : Installed!")
-
-//   event.waitUntil(
-      
-//       (async() => {
-//           try {
-//               cache_obj = await caches.open(cache)
-//               cache_obj.addAll(filesToCache)
-//           }
-//           catch{
-//               console.log("error occured while caching...")
-//           }
-//       })()
-//   )
-// } )
-
-// const filesUpdate = cache => {
-//   const stack = [];
-//   filesToCache.forEach(file => stack.push(
-//       cache.add(file).catch(_=>console.error(`can't load ${file} to cache`))
-//   ));
-//   return Promise.all(stack);
-// };
-
-// installEvent.waitUntil(caches.open(cacheName).then(filesUpdate));
-
-/* Serve cached content when offline */
-self.addEventListener('fetch', function(e) {
+var CACHE_NAME = APP_PREFIX + VERSION
+self.addEventListener('fetch', function (e) {
+  console.log('Fetch request : ' + e.request.url);
   e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
+    caches.match(e.request).then(function (request) {
+      if (request) {
+        console.log('Responding with cache : ' + e.request.url);
+        return request
+      } else {
+        console.log('File is not cached, fetching : ' + e.request.url);
+        return fetch(e.request)
+      }
     })
-  );
-});
+  )
+})
+
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      console.log('Installing cache : ' + CACHE_NAME);
+      return cache.addAll(URLS)
+    })
+  )
+})
+
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      var cacheWhitelist = keyList.filter(function (key) {
+        return key.indexOf(APP_PREFIX)
+      })
+      cacheWhitelist.push(CACHE_NAME);
+      return Promise.all(keyList.map(function (key, i) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          console.log('Deleting cache : ' + keyList[i]);
+          return caches.delete(keyList[i])
+        }
+      }))
+    })
+  )
+})

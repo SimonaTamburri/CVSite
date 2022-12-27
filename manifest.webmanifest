@@ -1,0 +1,17 @@
+{
+  "name": "CVSite",
+  "short_name": "CVSITE",
+  "description": "Portfolio site for personal Curriculum Vitae",
+  "scope": "/CVSite/",
+  "start_url": "/CVSite/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone", 
+  "icons": [
+      {
+        "src": "/CVSite/img/icon.png",
+        "type": "image/png",
+        "sizes": "700x700"
+      }
+  ]
+}
