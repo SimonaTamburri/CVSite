@@ -1,6 +1,6 @@
 var GHPATH = '/CVSite';
 var APP_PREFIX = 'cvslm_';
-var VERSION = 'version_02';
+var VERSION = 'version_03';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
@@ -8,6 +8,11 @@ var URLS = [
   `${GHPATH}/css/w3.css`,
   `${GHPATH}/img/icon.png`,
   `${GHPATH}/img/icon.jpeg`,
+  `${GHPATH}/fonts/fontawesome-webfont.eot`,
+  `${GHPATH}/fonts/fontawesome-webfont.svg`,
+  `${GHPATH}/fonts/fontawesome-webfont.ttf`,
+  `${GHPATH}/fonts/fontawesome-webfont.woff`,
+  `${GHPATH}/fonts/fontawesome-webfont.woff2`,
   `${GHPATH}/js/app.js`
 ]
 
