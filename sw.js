@@ -5,7 +5,6 @@ var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
   `${GHPATH}/css/w3.css`,
-  `${GHPATH}/css/w3.css`,
   `${GHPATH}/img/icon.png`,
   `${GHPATH}/img/icon.jpeg`,
   `${GHPATH}/fonts/fontawesome-webfont.eot`,
