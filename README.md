@@ -1,3 +1,3 @@
 # CVSite
 Portfolio site for personal Curriculum Vitae. 
-Please read wiki first.
+Read https://github.com/LucaMartinengo/CVSite/ wiki first.
