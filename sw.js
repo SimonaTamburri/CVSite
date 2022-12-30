@@ -1,6 +1,6 @@
 var GHPATH = '/CVSite';
-var APP_PREFIX = 'cvslm_';
-var VERSION = 'version_04';
+var APP_PREFIX = 'cvsst_';
+var VERSION = 'version_01';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
